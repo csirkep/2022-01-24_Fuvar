@@ -32,17 +32,18 @@ namespace _2022_01_24_Fuvar
                 //5.
                 int bankkártyás = 0;
                 int készpénz = 0;
-                foreach (var h in fuvarok)
+                foreach (var d in fuvarok)
                 {
-                    if (h.FizetésMód == "bankkártyás")
+                    if (d.FizetésMód == "bankkártyás")
                     {
                         bankkártyás++;
                     }
-                    if (h.FizetésMód == "készpénz")
+                    if (d.FizetésMód == "készpénz")
                     {
                         készpénz++;
                     }
                 }
+                Console.WriteLine($"Bankkártya: {bankkártyás} fuvar");
                 
                 //5.b
                 Dictionary<string, int> stat = new Dictionary<string, int>();
@@ -56,6 +57,11 @@ namespace _2022_01_24_Fuvar
                     {
                         stat.Add(d.FizetésMód, 1);
                     }
+                }
+                Console.WriteLine($"5.feladat:");
+                foreach (var s in stat)
+                {
+                    Console.WriteLine($"\t{s.Key}: {s.Value} fuvar");
                 }
 
 
