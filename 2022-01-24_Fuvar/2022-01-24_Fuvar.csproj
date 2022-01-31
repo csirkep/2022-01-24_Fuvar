@@ -49,8 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="fuvar.csv" />
-    <None Include="Fuvar.pdf" />
+    <None Include="bin\Debug\fuvar.csv" />
+    <None Include="bin\Debug\Fuvar.pdf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,6 +17,21 @@ namespace _2022_01_24_Fuvar
                 fuvarok.Add(new Fuvar(sor));
             }
             Console.WriteLine($"3. feladat : {fuvarok.Count} fuvar");
+
+            double Bevétel = 0;
+            int db = 0;
+            foreach (var f in fuvarok)
+            {
+                if (f.TaxID == 6185)
+                {
+                    Bevétel += f.Viteldíj + f.Borravaló;
+                    db++;
+                }
+                Console.WriteLine($"4.feladat: {db} fuvar alatt: {Bevétel}");
+
+
+                Console.ReadKey();
+            }
         }
     }
 }
