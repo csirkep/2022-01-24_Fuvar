@@ -63,7 +63,13 @@ namespace _2022_01_24_Fuvar
                 {
                     Console.WriteLine($"\t{s.Key}: {s.Value} fuvar");
                 }
-
+                //5.c
+                Console.WriteLine($"5.feladat:");
+                fuvarok
+                    .GroupBy(x => x.FizetésMód)
+                    .Select(g => new { fizetésimód = g.Key, db = g.Count() })
+                    .ToList()
+                    .ForEach(x => Console.WriteLine($"\t{x.fizetésimód}: {x.db} fuvar"));
 
                 Console.ReadKey();
             }
