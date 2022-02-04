@@ -70,6 +70,15 @@ namespace _2022_01_24_Fuvar
                     .Select(g => new { fizetésimód = g.Key, db = g.Count() })
                     .ToList()
                     .ForEach(x => Console.WriteLine($"\t{x.fizetésimód}: {x.db} fuvar"));
+                //6.
+                double ÖsszMérföld = 0;
+
+                foreach (var d in fuvarok)
+                {
+                    ÖsszMérföld += d.Távolság;
+                }
+                Console.WriteLine($"6. feladat: {ÖsszMérföld*1.6:0.00} km");
+
 
                 Console.ReadKey();
             }
